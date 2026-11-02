@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Curiosity Got You Here </title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    radial-gradient(circle at top right, #293542, transparent 45%),
+    radial-gradient(circle at bottom left, #252d35, transparent 40%),
+    #10161d;
+  color: #eef1f3;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.card {
+  width: 100%;
+  max-width: 440px;
+  padding: 34px 27px;
+  background: linear-gradient(145deg, #202c38, #17212b);
+  border: 1px solid #3c4955;
+  border-radius: 20px;
+  box-shadow: 0 25px 70px #0007;
+  animation: appear .8s ease;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.label {
+  color: #d0ad72;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  line-height: 1.2;
+  margin: 22px 0 12px;
+  color: #f5f1e9;
+}
+
+p {
+  color: #b6c0ca;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+input {
+  width: 100%;
+  margin-top: 13px;
+  padding: 15px;
+  border-radius: 9px;
+  border: 1px solid #465665;
+  background: #111a23;
+  color: white;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  outline: none;
+  transition: .3s;
+}
+
+input:focus {
+  border-color: #d0ad72;
+  box-shadow: 0 0 12px #d0ad7225;
+}
+
+button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 15px;
+  border: none;
+  border-radius: 9px;
+  background: linear-gradient(110deg, #d0ad72, #b99055);
+  color: #17202a;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: .25s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.hint {
+  margin-top: 25px;
+  font-size: 12px;
+  color: #8d9ba8;
+  text-align: center;
+}
+
+.error {
+  color: #e59a8f;
+  font-size: 12px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#message {
+  display: none;
+  animation: appear .9s ease;
+}
+
+.rule {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #b99055, transparent);
+  margin: 25px 0;
+}
+
+.message-text {
+  color: #e0e5e9;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.signoff {
+  color: #d0ad72;
+  margin-top: 27px;
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.emoji {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.footer {
+  text-align: center;
+  color: #71808e;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-top: 28px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+  <!-- PASSWORD SCREEN -->
+  <section id="lock">
+
+    <div class="emoji"> </div>
+
+    <div class="label">
+      A little something for you
+    </div>
+
+    <h1>Before you proceed...</h1>
+
+    <p>
+      The only step to being a sacrifice. 🙂
+    </p>
+
+    <div class="rule"></div>
+
+    <div class="label">
+      Enter password
+    </div>
+
+    <input
+      type="password"
+      id="password"
+      placeholder="Your password goes here..."
+      autocomplete="off"
+    >
+
+    <button onclick="unlock()">
+      LET ME IN 👀
+    </button>
+
+    <div class="error" id="error"></div>
+
+    <div class="hint">
+      💡 Hint: A fruit.
+    </div>
+
+  </section>
+
+
+  <!-- MESSAGE SCREEN -->
+  <section id="message">
+
+    <div class="label">
+      Well, well, well...
+    </div>
+
+    <h1>
+      Curiosity is what got you here.
+    </h1>
+
+    <div class="rule"></div>
+
+    <div class="message-text">
+
+      With you successfully opening this, it means you're ready for anything even being my first sacrifice test. 😂
+
+      <br><br>
+
+      You won't know how but I'll be making my move everyday 😎
+
+      <br><br>
+
+      Also, thanks for saving me a seat. I would've suffered severely on a Monday. 
+
+      <br><br>
+
+      If you want any cute words, ask your girlfriend to do so🚶🏽‍♀️ or we can share my ChatGPT. 
+     
+      <br><br>
+      
+      I'm generous like that😉
+
+      <br><br>
+
+      Bye now. 👋🏽
+
+    </div>
+
+    <div class="rule"></div>
+
+    <div class="signoff">
+      — Me.
+    </div>
+
+    <div class="footer">
+       END
+    </div>
+
+  </section>
+
+</div>
+
+
+<script>
+
+const PASSWORD = "Mafenesi";
+
+function unlock() {
+
+  const entered = document
+    .getElementById("password")
+    .value.trim();
+
+  if (entered.toLowerCase() === PASSWORD.toLowerCase()) {
+
+    document.getElementById("lock").style.display = "none";
+
+    document.getElementById("message").style.display = "block";
+
+  } else {
+
+    document.getElementById("error").textContent =
+      "Well aren't you lazy. Try thinking less. 😂";
+
+  }
+
+}
+
+document.getElementById("password")
+.addEventListener("keydown", function(event) {
+
+  if (event.key === "Enter") {
+    unlock();
+  }
+
+});
+
+</script>
+
+</body>
+</html>
